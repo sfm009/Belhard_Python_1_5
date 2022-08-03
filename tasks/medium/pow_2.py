@@ -10,10 +10,20 @@ is_pow_2(1024) -> True
 is_pow_2(13) -> False
 is_pow_2(17) -> False
 """
+from math import pow
 
 
 def is_pow_2(number) -> bool:
-    return None
+    i = -1  # показатель степени
+    while number >= 2 ** i:
+        i += 1
+        if pow(2, i) == number:
+            result = True
+            break
+        else:
+            result = False
+
+    return result
 
 
 if __name__ == '__main__':
