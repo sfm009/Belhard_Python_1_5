@@ -15,10 +15,14 @@ VALUE_LIST = ['a', 'b', 'c', 'd', 'e', 'f']
 
 def list_compose(indexes: list, values: list) -> list:
     result_list = []
-    for i in range(len(indexes)):
-        index = indexes[i]
-        value = values[index]
-        result_list.append(value)
+    for i in indexes:
+        try:
+            result_list.append(values[i])
+        except IndexError:
+            result_list.append(None)
+        # index = indexes[i]
+        # value = values[index]
+        # result_list.append(value)
     return result_list
 
 
