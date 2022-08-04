@@ -54,7 +54,7 @@ def random_gift():
 
 if __name__ == '__main__':
     print("Просим показать ребенка дневник\n")
-    gift = 'ps5'
+    gift = None
     try:
         score = get_score()
         if score < 7:
