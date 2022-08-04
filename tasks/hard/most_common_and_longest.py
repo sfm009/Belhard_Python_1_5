@@ -10,8 +10,14 @@
 
 
 def common_and_longest(text: str) -> tuple:
-    common = None
-    longest = None
+    list_text = [text]
+    common = list_text[0]
+    longest = list_text[0]
+    for i in range(1, len(list_text)):
+        if len(list_text[i]) < common:
+            common = list_text[i]
+        elif len(list_text[i]) > longest:
+            longest = list_text[i]
     return common, longest
 
 
