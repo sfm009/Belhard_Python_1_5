@@ -7,17 +7,14 @@
 можно решить с помощью циклов и переменных, но предпочтительней с
 помощью модуля collections, используя collections.Counter
 """
+from collections import Counter
 
 
 def common_and_longest(text: str) -> tuple:
-    list_text = [text]
-    common = list_text[0]
-    longest = list_text[0]
-    for i in range(1, len(list_text)):
-        if len(list_text[i]) < common:
-            common = list_text[i]
-        elif len(list_text[i]) > longest:
-            longest = list_text[i]
+    words_to_count = Counter(text.split())
+    common = words_to_count.most_common()[0][0]
+    longest = max(words_to_count, key=len)
+
     return common, longest
 
 
