@@ -70,4 +70,3 @@ if __name__ == '__main__':
         print(praise(gift))
     finally:
         print(cook_dinner())
-
