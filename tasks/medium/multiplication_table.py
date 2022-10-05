@@ -9,8 +9,10 @@
 
 
 def multiplication_table(n: int) -> list:
-    # TODO тут написать код
     result = []
+    for i in range(11):
+        result.append(i * n)
+        continue
     return result
 
 

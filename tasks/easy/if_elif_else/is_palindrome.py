@@ -26,6 +26,11 @@ def is_palindrome(check_str: str) -> bool:
     :rtype: bool
     """
     result = None
+    reverse_str = check_str[::-1]
+    if check_str.capitalize() == reverse_str.capitalize():
+        result = True
+    else:
+        result = False
     return result
 
 
